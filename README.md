@@ -26,8 +26,21 @@ A simulação considera a formulação **linearizada** do movimento longitudinal
 
 ## Resultados
 
-Gráficos da simulação mostram como o ângulo de ataque varia com o tempo após a perturbação inicial, ilustrando a resposta dinâmica da aeronave.
+Neste trabalho, modelamos a dinâmica longitudinal linearizada da aeronave Cessna 152 sob pequenas perturbações em torno de um ponto de equilíbrio em voo nivelado. O sistema foi descrito por quatro variáveis de estado: perturbações na velocidade 𝑈', ângulo de ataque 𝛼', ângulo de inclinação 𝜃 e velocidade angular de arfagem q'.
 
+A partir dos parâmetros físicos e aerodinâmicos do modelo, obtivemos as derivadas de estabilidade, que compuseram a matriz dinâmica 𝐴 do sistema linearizado. Em seguida, implementamos uma simulação numérica via método de Runge-Kutta de 4ª ordem, analisando a resposta temporal do sistema para uma condição inicial com pequenas perturbações.
+
+Além disso, representamos graficamente o campo de vetores no plano de fase (𝛼,𝑞) , evidenciando o comportamento dinâmico ao redor do equilíbrio. Foi possível observar uma trajetória típica de retorno estável, com oscilações amortecidas, representando a resposta natural da aeronave a distúrbios suaves.
+
+A análise dos autovalores da matriz 𝐴 confirmou a presença dos dois modos clássicos da dinâmica longitudinal:
+
+Um modo oscilatório amortecido (com autovalores complexos conjugados), que representa o modo de período curto da aeronave;
+
+Um modo real negativo mais lento, associado ao amortecimento suave do modo phugoid.
+
+Esses resultados mostram que o sistema é estável, pois todos os autovalores possuem parte real negativa, e que a resposta natural do Cessna 152 tende ao equilíbrio após uma perturbação.
+
+Gráficos da simulação mostram como o ângulo de ataque varia com o tempo após a perturbação inicial, ilustrando a resposta dinâmica da aeronave.
 ---
 
 ## Autor
